@@ -33,7 +33,7 @@ app.get(['/facebook', '/instagram'], function(req, res) {
     res.send(req.query['hub.challenge']);
   } else {
     console.log(req.query);
-    res.sendStatus(400);
+    res.send(req.query);
   }
 });
 
