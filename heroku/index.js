@@ -32,9 +32,11 @@ app.get(['/facebook', '/instagram'], function(req, res) {
   ) {
     res.send(req.query['hub.challenge']);
   } else {
+    console.log(req.query);
     res.sendStatus(400);
   }
 });
+
 
 app.post('/facebook', function(req, res) {
   console.log('Facebook request body:', req.body);
